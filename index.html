@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PuzzleForge | Mystery & Puzzle Platform</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect the JavaScript file -->
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+        <a href="#" class="logo">🧩 PuzzleForge</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#create">Create Puzzle</a>
+            <a href="#explore">Explore</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Welcome section -->
+        <section id="home" class="hero">
+            <p class="tagline">THINK DIFFERENTLY. SOLVE SMARTER.</p>
+
+            <h1>Every Mystery Has a <span>Solution.</span></h1>
+
+            <p class="hero-description">
+                Create mind-bending puzzles, discover hidden clues,
+                challenge your thinking, and become a mystery solver.
+            </p>
+
+            <a href="#explore" class="primary-button">
+                Explore Puzzles
+            </a>
+        </section>
+
+        <!-- Create puzzle section -->
+        <section id="create" class="section">
+            <div class="section-heading">
+                <p class="tagline">YOUR IMAGINATION, YOUR RULES</p>
+                <h2>Create Your Own Mystery</h2>
+                <p>Design a challenge and let others solve it.</p>
+            </div>
+
+            <div class="form-card">
+                <form id="create-form">
+
+                    <label for="title">Puzzle Title</label>
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="Example: The Missing Diamond"
+                        maxlength="100"
+                        required
+                    >
+
+                    <label for="description">Mystery Description</label>
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="Describe the mystery..."
+                        maxlength="1000"
+                        required
+                    ></textarea>
+
+                    <label for="clue">First Clue</label>
+                    <textarea
+                        id="clue"
+                        name="clue"
+                        placeholder="Give the player a clue..."
+                        maxlength="1000"
+                        required
+                    ></textarea>
+
+                    <label for="answer">Correct Answer</label>
+                    <input
+                        type="text"
+                        id="answer"
+                        name="answer"
+                        placeholder="Enter the correct answer"
+                        maxlength="200"
+                        required
+                    >
+
+                    <button type="submit" class="primary-button">
+                        + Create Puzzle
+                    </button>
+
+                    <p id="create-message" aria-live="polite"></p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- Explore puzzles section -->
+        <section id="explore" class="section">
+            <div class="section-heading">
+                <p class="tagline">PUT YOUR BRAIN TO THE TEST</p>
+                <h2>Explore Mysteries</h2>
+                <p>Read the clues and see if you can solve the puzzle.</p>
+            </div>
+
+            <div class="puzzle-grid" id="puzzle-list">
+
+                <!-- Sample puzzle card -->
+                <article class="puzzle-card">
+                    <span class="puzzle-category">LOGIC PUZZLE</span>
+
+                    <h3>The Secret Number</h3>
+
+                    <p>
+                        A mysterious number is hidden.
+                        Can you discover it using the clue?
+                    </p>
+
+                    <div class="clue-box">
+                        <strong>Clue:</strong>
+                        I am an even number between 1 and 10.
+                        I am greater than 6.
+                    </div>
+
+                    <form class="demo-solve-form">
+                        <label for="demo-answer">Your Answer</label>
+
+                        <input
+                            type="text"
+                            id="demo-answer"
+                            name="answer"
+                            placeholder="Enter your answer"
+                            required
+                        >
+
+                        <button type="submit" class="secondary-button">
+                            Check Answer
+                        </button>
+
+                        <p class="solve-message" aria-live="polite"></p>
+                    </form>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>🧩 PuzzleForge — Built for curious minds.</p>
+        <p>Think. Discover. Solve.</p>
+    </footer>
+
+</body>
+</html>
